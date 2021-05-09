@@ -11,11 +11,16 @@ export const reducer = (state, action) => {
         ...state,
         products: [...action.products]
       };
-      case UPDATE_CATEGORIES: 
-        return {
-          ...state,
-          categories: [...action.categories]
-        }
+    case UPDATE_CATEGORIES: 
+      return {
+        ...state,
+        categories: [...action.categories]
+      }
+    case UPDATE_CURRENT_CATEGORY: 
+      return {
+        ...state,
+        currentCategory: action.currentCategory
+      };
     // it it's none of these actions, do not update state at all
     default: 
       return state;
